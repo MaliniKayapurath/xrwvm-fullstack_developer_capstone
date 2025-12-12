@@ -146,7 +146,7 @@ def initiate():
           "color": "Black",
           "car_make": car_make_instances[4]
       },
-    # Add more CarModel instances as needed
+      # Add more CarModel instances as needed
     ]
 
     for data in car_model_data:
