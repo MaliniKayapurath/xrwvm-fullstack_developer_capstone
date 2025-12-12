@@ -16,7 +16,7 @@ class CarMake(models.Model):
     name = models.CharField(max_length=100)
     description = models.TextField()
     country = models.CharField(max_length=100)
-    
+
     def __str__(self):
         return self.name  # Return the name as the string representation
 
@@ -33,7 +33,7 @@ class CarMake(models.Model):
 
 class CarModel(models.Model):
     car_make = models.ForeignKey(
-        CarMake, 
+        CarMake,
         on_delete=models.CASCADE
     )  # Many-to-One relationship
     name = models.CharField(max_length=100)
@@ -44,8 +44,8 @@ class CarModel(models.Model):
         # Add more choices as required
     ]
     type = models.CharField(
-        max_length=10, 
-        choices=CAR_TYPES, 
+        max_length=10,
+        choices=CAR_TYPES,
         default='SUV'
     )
     year = models.IntegerField(
